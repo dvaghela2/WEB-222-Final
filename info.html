@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <title>Divyarajsinh Vaghela</title>
+  </head>
+  <body>
+    <!-- Begin Header-->
+    <header>
+      <div id="header-container" class="header-container">
+        <h1>User Info Page</h1>
+      </div>
+    </header>
+    <!-- End Header-->
+
+    <div class="container grid-three-column">
+      <!-- Begin Nav-->
+
+      <nav id="nav">
+        <ul>
+          <li><a href="./honesty.html">Welcome</a></li>
+          <li><a href="./info.html">Sign Up</a></li>
+          <li><a href="./reflection.html">Reflection</a></li>
+        </ul>
+      </nav>
+
+      <!-- End Nav-->
+
+      <!-- Start Form -->
+      <main>
+        <form
+          id="form"
+          action="https://httpbin.org/post"
+          method="post"
+          name="signup"
+          onsubmit="return(validate());"
+        >
+          <input type="hidden" name="lastName" id="lastName" value="Roble" />
+          <input
+            type="hidden"
+            name="studentId"
+            id="studentId"
+            value="060678141"
+          />
+
+          <div class="flex-input">
+            <label for="first-name">First name</label><br />
+            <input
+              type="text"
+              id="first-name"
+              name="user_first-name"
+              required
+            />
+          </div>
+          <div class="flex-input">
+            <label for="last-name">Last name</label><br />
+            <input type="text" id="last-name" name="user_last-name" required />
+          </div>
+
+          <div class="flex-input">
+            <label for="email">Email Address</label><br />
+            <input type="email" id="email" name="user_email" required />
+          </div>
+          <div class="flex-input">
+            <label for="username">Username</label><br />
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              minlength="6"
+            />
+          </div>
+
+          <div class="flex-input">
+            <label for="pass">Password</label><br />
+            <input type="password" id="pass" name="password" />
+          </div>
+
+          <div class="flex-input">
+            <label for="confirm-pass">Confirm Password</label><br />
+            <input type="password" id="confirm-pass" name="password" />
+          </div>
+
+          <div class="border"></div>
+
+          <p>Education Status</p>
+          <div class="flex-radio">
+            <input type="radio" id="graduated" name="userEducation" />
+            <label for="graduated">Graduated</label>
+          </div>
+          <div class="flex-radio">
+            <input type="radio" id="enrolled" name="userEducation" />
+            <label for="enrolled">Currently Enrolled</label>
+          </div>
+          <div class="flex-radio">
+            <input type="radio" id="did-not-graduate" name="userEducation" />
+            <label for="did-not-graduate">Did not Graduate</label>
+          </div>
+
+          <div class="flex-input">
+            <label for="age">Age</label><br />
+            <input
+              type="number"
+              id="age"
+              name="user_age"
+              min="18"
+              max="60"
+              required
+            />
+          </div>
+
+          <button type="submit">Sign Up</button>
+          <button name="resetBtn" type="reset">Reset</button>
+        </form>
+      </main>
+      <!-- End Form -->
+
+      <aside>
+        <h3 class="error-title">Messages</h3>
+        <div class="error" id="error-1"></div>
+        <div class="error" id="error-2"></div>
+        <div class="error" id="error-3"></div>
+        <div class="error" id="error-4"></div>
+        <div class="error" id="error-5"></div>
+      </aside>
+    </div>
+    <!-- Start Footer -->
+    <footer>
+      ©2021 - Divyarajsinh Vaghela
+      <a href="https://github.com/dvaghela2/WEB-222-Final.git">Github</a>
+    </footer>
+    <!-- End Footer -->
+    <script src="./info.js"></script>
+  </body>
+</html>
